@@ -1,4 +1,173 @@
-<h1> TESTANDOO 1</h1>
-<h2> TESTANDOO 2 </h2>
-<h3> TESTANDOO 3 </h3>
-Agora sem usar a ultima commit
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<style>
+    /* original idea http://www.bootply.com/phf8mnMtpe */
+    /* esconde node interno*/
+    .tree ul li > ul {
+        display:none;
+    }
+    .tree li span input[type="checkbox"] {
+        margin-top: 0px;
+        margin: 3px;
+    }
+        /* original idea http://www.bootply.com/phf8mnMtpe */
+        .tree {
+        min-height: 20px;
+        padding: 19px;
+        margin-bottom: 20px;
+        background-color: #fbfbfb;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05)
+    }
+
+        .tree li {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 5px 0 5px;
+            position: relative
+        }
+
+            .tree li::before, .tree li::after {
+                content: '';
+                left: -20px;
+                position: absolute;
+                right: auto
+            }
+
+            .tree li::before {
+                border-left: 1px solid #999;
+                bottom: 50px;
+                height: 100%;
+                top: 0;
+                width: 1px
+            }
+
+            .tree li::after {
+                border-top: 1px solid #999;
+                height: 20px;
+                top: 30px;
+                width: 25px
+            }
+
+            .tree li span {
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                border: 1px solid #999;
+                border-radius: 5px;
+                display: inline-block;
+                padding: 3px 8px;
+                text-decoration: none
+            }
+
+            .tree li.parent_li > span {
+                cursor: pointer
+            }
+
+        .tree > ul > li::before, .tree > ul > li::after {
+            border: 0
+        }
+
+        .tree li:last-child::before {
+            height: 30px
+        }
+
+            .tree li.parent_li > span:hover, .tree li.parent_li > span:hover + ul li span {
+                background: #eee;
+                border: 1px solid #428bca;
+                color: #428bca
+            }
+  
+</style>
+
+
+<div class="panel-collapse collapse in">
+    <div class="tree">
+    <ul class="text-primary">
+        <li>
+            <span><i class="fa fa-plus-square"></i><input type="checkbox" /> Teste 1  </span>
+            <ul class="teste">
+                <li>
+                    <span><i class="fa fa-plus-square"></i><input type="checkbox" /> Ceng </span>
+                    <ul>
+                        <li> <span>Ideas <input type="checkbox" /> </span> </li>
+                    </ul>
+                </li>
+                <li>
+                    <span><i class="fa fa-plus-square"></i><input type="checkbox" /> Ken </span>
+                    <ul>
+                        <li> <span>Ideas </span></li>
+                        <li>
+                            <span><i class="fa fa-plus-square"></i><input type="checkbox" /> Менюшка </span>
+                            <ul>
+                                <li>
+                                    <span><i class="fa fa-plus-square"></i><input type="checkbox" /> Менюшка</span>
+                                    <ul>
+                                        <li> <span><input type="checkbox" checked /> Менюшка </span> </li>
+                                        <li> <span><input type="checkbox" name="teste2" /> Менюшка </span> </li>
+                                    </ul>
+                                </li>
+                                <li> <span><input type="checkbox" /> Менюшка </span> </li>
+                                <li> <span><input type="checkbox" name="teste2" /> Менюшка </span> </li>
+                            </ul>
+                        </li>
+                        <li> <span><input type="checkbox" /> Менюшка </span> </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span><i class="fa fa-plus-square"></i><input type="checkbox" /> Library </span>
+            <ul>
+                <li> <span><input type="checkbox" /> Files</span> </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</div>
+
+<script>
+    function treeview() {
+        $('input[type="checkbox"]').on('click', function (e) { e.stopPropagation() })
+        $('.tree').find('input[type="checkbox"]:checked').each(function () {
+            $(this).parentsUntil(".tree").slice(1).css('display', 'block')
+        });
+        //$('.tree li:has(ul) li').hide('fast')
+        $('.tree li:has(ul)').addClass('parent_li');
+        $('.tree li.parent_li > span').on('click', function (e) {
+            var children = $(this).parent('li.parent_li').find(' > ul > li');
+            if (children.is(":visible")) {
+                //children.hide('fast');
+                children.parent().css('display', 'none');
+                $(this).find(' > i').addClass('fa-plus-square').removeClass('fa-minus-square');
+            } else {
+                children.parent().css('display', 'block');
+                console.log(children.parent())
+                // children.show('fast');
+                $(this).find(' > i').addClass('fa-minus-square').removeClass('fa-plus-square');
+            }
+            e.stopPropagation();
+        });
+    }
+
+    $(function () {
+        treeview()
+    });
+
+</script>
